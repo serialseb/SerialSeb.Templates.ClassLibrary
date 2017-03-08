@@ -1,0 +1,67 @@
+environment:
+  GITHUB_TOKEN:
+    secure: LWCRPexJEGMkW0f8ku8Q45CPnQDCi4sgyi/cFdOHizI9ToLlDYozXxI21bD9cDU4
+  SONARQUBE_TOKEN:
+    secure: qauV20TWEH6YwWi1g4DxNFlyqCxsvHnXy3evlLVr3FqNRsW6jnQ92eAE657OpKlv
+  SSL_CERT_FILE: C:\ca\cacert.pem
+  COVERALLS_REPO_TOKEN:
+    secure: sR+OO2wYopy1MdZX+asECm56PinUUuIHNQXcAfSmVlf6lw6y4I5jOiby5IqsuwyP
+  coverity_token:
+    secure: xZnMqxFHZN9mENgS6gGTtlz7hadzkcHVgp5HRGML4XY=
+  coverity_email:
+    secure: cd97kb3eIDThYbzxEJHk/YADgHwcEwE5aRS05A0GB/4=
+
+assembly_info:
+  patch: false
+  file: src\CommonInfo.cs
+  assembly_version: $(AssemblyMajor).0.0.0
+  assembly_file_version: '{version}'
+  assembly_informational_version: '{version}'
+
+nuget:
+  project_feed: true
+  disable_publish_on_pr: true
+
+configuration: Debug
+
+platform: Any CPU
+
+cache:
+  - src\packages -> **\packages.config
+  - vendor\ -> Gemfile.lock
+  - C:\ProgramData\chocolatey\bin -> appveyor.yml
+  - C:\ProgramData\chocolatey\lib -> appveyor.yml
+  - C:\Users\appveyor\.sonar\cache
+
+build:
+  parallel: true
+  verbosity: minimal
+  publish_nuget: true
+  publish_nuget_symbols: true
+  include_nuget_references: true
+  project: src/ConsulStructure.sln
+
+install:
+  - nuget install SerialSeb.Build -OutputDirectory . -ExcludeVersion
+  - ps: ./build/Install.ps1
+
+before_build:
+  - ps: ./build/Before-Build.ps1
+
+build_script:
+  - ps: ./build/Build-Script.ps1
+
+after_build:
+  - ps: ./build/After-Build.ps1
+
+test_script:
+- ps: ./build/Test-Script.ps1
+
+deploy:
+ - provider: NuGet
+   api_key:
+     secure: KAawIkFXgAsCh3eqjDd2N/epoJ8fW12RMSZpEaaqPZvlwlEEGdxanyxCFXccnvMa
+   skip_symbols: true
+   artifact: /.*\.nupkg/
+   on:
+     appveyor_repo_tag: true

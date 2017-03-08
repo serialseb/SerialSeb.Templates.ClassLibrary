@@ -1,0 +1,29 @@
+{
+    "author": "Sebastien Lambla",
+    "name": "Class library with Tests and AppVeyor build",
+    "identity": "SerialSeb.Templates.ClassLibrary",
+    "groupIdentity": "SerialSeb.Templates",
+    "shortname": "serialseb/classlib",
+    "tags": {
+        "language": "C#"
+    },
+    "sourceName": "ClassLibrary",
+    "guids": ["C5393765-864E-4604-8589-9F5ABBE24577"],
+    "symbols": {
+        "organization": {
+            "replaces": "serialseb",
+            "dataType": "choices",
+            "description": "The github organisation to use in generating github paths",
+            "type": "parameter",
+            "choices": ["serialseb", "OpenRasta"],
+            "defaultValue": "serialseb"
+        }
+    },
+    "sources": [
+        {
+            "source": "./",
+            "target": "./",
+            "exclude": ["**/.*/**/*", "/[Bb]in/", "/[Oo]bj/", ".template.config/**/*", "**/*.filelist"]
+        }
+    ]
+}

@@ -1,0 +1,11 @@
+root = true
+
+[*.{cs,yml}]
+indent_style = space
+indent_size = 2
+
+[*.sln]
+end_of_line = crlf
+
+[packages.config]
+end_of_line = crlf
