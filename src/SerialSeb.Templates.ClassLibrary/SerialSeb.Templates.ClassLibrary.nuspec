@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<package>
+  <metadata>
+    <id>SerialSeb.Templates.ClassLibrary</id>
+    <version>$version$</version>
+    <title>SerialSeb.Templates.ClassLibrary</title>
+    <authors>$authors$</authors>
+    <owners>serialseb</owners>
+    <developmentDependency>true</developmentDependency>
+    <licenseUrl>$licenseUrl$</licenseUrl>
+    <projectUrl>$projectUrl$</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>$description$</description>
+    <copyright>Copyright 2017 Sebastien Lambla</copyright>
+    <tags></tags>
+    <releaseNotes>$releaseNotes$</releaseNotes>
+    <contentFiles>
+      <files include="contentFiles\cs\**\*.*" buildAction="compile" />
+    </contentFiles>
+    <!--<dependencies>
+      <dependency id="DependentPackage" version="4.0" />
+    </dependencies>-->
+  </metadata>
+  <files>
+    <file src="**\*.cs" exclude="Properties/**;bin/**;obj/**" target="contentFiles\cs\any\App_Packages\SerialSeb.Templates.ClassLibrary.$version$" />
+    <file src="**\*.cs" exclude="Properties/**;bin/**;obj/**" target="content\App_Packages\SerialSeb.Templates.ClassLibrary.$version$" />
+  </files>
+</package>
