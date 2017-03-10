@@ -1,5 +1,4 @@
-﻿using System;
-using ClassLibrary;
+﻿using ClassLibrary;
 using Xunit;
 
 namespace Tests

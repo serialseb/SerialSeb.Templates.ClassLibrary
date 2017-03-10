@@ -1,12 +1,12 @@
-[![Coverage Status](https://coveralls.io/repos/github/serialseb/ClassLibrary/badge.svg?branch=master)](https://coveralls.io/github/serialseb/ClassLibrary?branch=master)
-[![Coverity Scan](https://img.shields.io/coverity/scan/11894.svg)](https://scan.coverity.com/projects/serialseb-ClassLibrary)
-[![Build Status](https://ci.appveyor.com/api/projects/status/mp5v36y4lg76ppju?svg=true)](https://ci.appveyor.com/project/OpenRasta/ClassLibrary)
-[![GitHub release](https://img.shields.io/github/release/serialseb/ClassLibrary.svg)](https://github.com/serialseb/ClassLibrary/releases/latest)
-[![NuGet](https://img.shields.io/nuget/v/ClassLibrary.svg)](https://www.nuget.org/packages/ClassLibrary/)
-[![GitHub pull requests](https://img.shields.io/github/issues-pr/serialseb/ClassLibrary.svg)](https://github.com/serialseb/ClassLibrary/pulls)
+[![Coverage Status](https://coveralls.io/repos/github/serialseb/SerialSeb.Templates.ClassLibrary/badge.svg?branch=master)](https://coveralls.io/github/serialseb/SerialSeb.Templates.ClassLibrary?branch=master)
+[![Coverity Scan](https://img.shields.io/coverity/scan/11894.svg)](https://scan.coverity.com/projects/serialseb-SerialSeb.Templates.ClassLibrary)
+[![Build Status](https://ci.appveyor.com/api/projects/status/github/serialseb/SerialSeb.Templates.ClassLibrary?svg=true)](https://ci.appveyor.com/project/OpenRasta/SerialSeb.Templates.ClassLibrary)
+[![GitHub release](https://img.shields.io/github/release/serialseb/SerialSeb.Templates.ClassLibrary.svg)](https://github.com/serialseb/SerialSeb.Templates.ClassLibrary/releases/latest)
+[![NuGet](https://img.shields.io/nuget/v/SerialSeb.Templates.ClassLibrary.svg)](https://www.nuget.org/packages/SerialSeb.Templates.ClassLibrary/)
+[![GitHub pull requests](https://img.shields.io/github/issues-pr/serialseb/SerialSeb.Templates.ClassLibrary.svg)](https://github.com/serialseb/SerialSeb.Templates.ClassLibrary/pulls)
 
 # ClassLibrary
 
-Intro
+Intro to organization stuff
 
 ## Credits

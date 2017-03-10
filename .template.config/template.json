@@ -1,29 +1,80 @@
 {
-    "author": "Sebastien Lambla",
-    "name": "Class library with Tests and AppVeyor build",
-    "identity": "SerialSeb.Templates.ClassLibrary",
-    "groupIdentity": "SerialSeb.Templates",
-    "shortname": "serialseb/classlib",
-    "tags": {
-        "language": "C#"
+  "author": "Sebastien Lambla",
+  "name": "Class library with Tests and AppVeyor build",
+  "identity": "SerialSeb.Templates.ClassLibrary",
+  "groupIdentity": "SerialSeb.Templates",
+  "shortname": "serialseb/classlib",
+  "tags": {
+    "language": "C#"
+  },
+  "sourceName": "SerialSeb.Templates.ClassLibrary",
+  "guids": [
+    "C5393765-864E-4604-8589-9F5ABBE24577"
+  ],
+  "symbols": {
+    "organization": {
+      "dataType": "string",
+      "description": "The github organisation to use in generating github paths",
+      "type": "parameter",
+      "defaultValue": "serialseb"
     },
-    "sourceName": "SerialSeb.Templates.ClassLibrary",
-    "guids": ["C5393765-864E-4604-8589-9F5ABBE24577"],
-    "symbols": {
-        "organization": {
-            "replaces": "serialseb",
-            "dataType": "choices",
-            "description": "The github organisation to use in generating github paths",
-            "type": "parameter",
-            "choices": ["serialseb", "OpenRasta"],
-            "defaultValue": "serialseb"
-        }
+    "organizationPaths":{
+      "type": "generated",
+      "generator": "regex",
+      "replaces": "/serialseb/",
+      "parameters": {
+        "source": "organization",
+        "steps": [
+         {"regex":"^(?<identifier>.*)$", "replacement":"/${identifier}/"} 
+        ]
+      }
     },
-    "sources": [
+    "organizationPrefixes":{
+      "type": "generated",
+      "generator": "regex",
+      "replaces": "/serialseb-",
+      "parameters": {
+        "source": "organization",
+        "steps": [
+         {"regex":"^(?<identifier>.*)$", "replacement":"/${identifier}-"} 
+        ]
+      }
+    },
+    "appVeyorJsonPrefix":{
+      "type": "generated",
+      "generator": "regex",
+      "replaces": "\"serialseb/",
+      "parameters": {
+        "source": "organization",
+        "steps": [
+         {"regex":"^(?<identifier>.*)$", "replacement":"/\"$1//"} 
+        ]
+      }
+    }
+  },
+  "sources": [
+    {
+      "source": "./",
+      "target": "./",
+      "exclude": [
+        "**/.*/**/*",
+        "/[Bb]in/",
+        "/[Oo]bj/",
+        ".template.config/**/*",
+        "**/*.filelist"
+      ]
+    }
+  ],
+  "PostActions": [
+    {
+       "ManualInstructions": [
         {
-            "source": "./",
-            "target": "./",
-            "exclude": ["**/.*/**/*", "/[Bb]in/", "/[Oo]bj/", ".template.config/**/*", "**/*.filelist"]
+          "Text": "Run dotnet restore."          
         }
-    ]
+       ],
+      "Description": "nuget restore",
+      "ActionId": "210D431B-A78B-4D2F-B762-4ED3E3EA9025",
+      "ContinueOnError": "false"
+    }
+  ]
 }
