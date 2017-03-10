@@ -88,14 +88,13 @@
   },
   "sources": [
     {
-      "source": "./",
-      "target": "./",
       "exclude": [
         "**/.*/**",
         "**/packages/**",
         "**/[Bb]in/**",
         "**/[Oo]bj/**",
-        "**/*.filelist"
+        "**/*.filelist",
+        "**/*.user"
       ]
     }
   ],
