@@ -1,4 +1,4 @@
-﻿using ClassLibrary;
+﻿using SerialSeb.Templates.ClassLibrary;
 using Xunit;
 
 namespace Tests

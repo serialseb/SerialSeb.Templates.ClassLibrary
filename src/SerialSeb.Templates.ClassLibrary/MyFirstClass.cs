@@ -1,4 +1,4 @@
-﻿namespace ClassLibrary
+﻿namespace SerialSeb.Templates.ClassLibrary
 {
   public class MyFirstClass
   {
