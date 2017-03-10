@@ -12,6 +12,11 @@
     "C5393765-864E-4604-8589-9F5ABBE24577"
   ],
   "symbols": {
+    "targetName": {
+      "type": "parameter",
+      "binding": "name",
+      "replaces": "mytarget"
+    },
     "organization": {
       "dataType": "string",
       "description": "The github organisation to use in generating github paths",
@@ -48,6 +53,35 @@
         "source": "organization",
         "steps": [
          {"regex":"^(?<identifier>.*)$", "replacement":"/\"$1//"} 
+        ]
+      }
+    },
+    "appVeyorUsername":{
+      "type": "parameter",
+      "dataType": "string",
+      "description":"The AppVeyor user to use in generating AppVeyor paths",
+      "defaultValue": "OpenRasta"
+    },
+
+    "appVeyorPrefix": {
+      "type": "generated",
+      "generator": "regex",
+      "replaces": "https://ci.appveyor.com/project/OpenRasta/",
+      "parameters": {
+        "source": "appVeyorUsername",
+        "steps": [
+         {"regex":"^(?<identifier>.*)$", "replacement":"https://ci.appveyor.com/project/${identifier}/"} 
+        ]
+      }
+    },
+    "dashName": {
+      "type": "generated",
+      "generator": "regex",
+      "replaces": "serialseb-templates-classLibrary",
+      "parameters": {
+        "source": "targetName",
+        "steps": [
+         {"regex":"\\.", "replacement":"-"} 
         ]
       }
     }

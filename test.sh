@@ -6,7 +6,7 @@ dotnet new -i .
 
 mkdir ~/Dev/MyAwesomeClassLib
 cd ~/Dev/MyAwesomeClassLib
-dotnet new serialseb/classlib -or OpenRasta
+dotnet new serialseb/classlib -or GitHubOrganisation -ap AppVeyorUser
 cd -
-code ~/Dev/MyAwesomeClassLib
+code ~/Dev/MyAwesomeClassLib/$1
 
