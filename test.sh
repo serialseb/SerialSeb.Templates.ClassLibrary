@@ -1,9 +1,12 @@
 #!/bin/sh
 
-rm -rf testdotnetnew
-mkdir testdotnetnew
-cd testdotnetnew
+rm -rf ~/Dev/MyAwesomeClassLib
+dotnet new --debug:reinit
+dotnet new -i .
+
+mkdir ~/Dev/MyAwesomeClassLib
+cd ~/Dev/MyAwesomeClassLib
 dotnet new serialseb/classlib -or OpenRasta
 cd -
-code testdotnetnew
+code ~/Dev/MyAwesomeClassLib
 

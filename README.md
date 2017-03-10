@@ -5,7 +5,7 @@
 [![NuGet](https://img.shields.io/nuget/v/SerialSeb.Templates.ClassLibrary.svg)](https://www.nuget.org/packages/SerialSeb.Templates.ClassLibrary/)
 [![GitHub pull requests](https://img.shields.io/github/issues-pr/serialseb/SerialSeb.Templates.ClassLibrary.svg)](https://github.com/serialseb/SerialSeb.Templates.ClassLibrary/pulls)
 
-# ClassLibrary
+# SerialSeb.Templates.ClassLibrary
 
 Intro to organization stuff
 
