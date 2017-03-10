@@ -42,7 +42,7 @@ build:
   project: src/SerialSeb.Templates.ClassLibrary.sln
 
 install:
-  - nuget install SerialSeb.Build -Pre -OutputDirectory . -ExcludeVersion -Source https://ci.appveyor.com/nuget/serialseb-build-uas1ftbnwxfh
+  - nuget install SerialSeb.Build -OutputDirectory . -ExcludeVersion # -Pre -Source https://ci.appveyor.com/nuget/SerialSeb.Build
   - ps: ./SerialSeb.Build/Install.ps1
 
 before_build:
