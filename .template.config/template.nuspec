@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<package>
+  <metadata>
+    <id>SerialSeb.Templates.ClassLibrary</id>
+    <version>$version$</version>
+    <title>SerialSeb.Templates.ClassLibrary</title>
+    <authors>$authors$</authors>
+    <owners>serialseb</owners>
+    <licenseUrl>$licenseUrl$</licenseUrl>
+    <projectUrl>$projectUrl$</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>$description$</description>
+    <copyright>Copyright 2017 Sebastien Lambla</copyright>
+    <tags></tags>
+    <releaseNotes>$releaseNotes$</releaseNotes>
+    <packageTypes>
+        <packageType name="Template" />
+    </packageTypes>
+  </metadata>
+  <files> 
+    <file src="..\**\*.*" exclude="../*.sh;test.sh;../.*/**/*;../**/*.filelist;../**/*.user" target="content" />
+    <file src="..\install.sh" target="content" />
+  </files>
+</package>
